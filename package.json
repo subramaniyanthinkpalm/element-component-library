@@ -1,6 +1,6 @@
 {
   "name": "@subramaniyanthinkpalm/element-component-library",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "source": "src/index.js",
@@ -68,7 +68,7 @@
     "react-dom": "^17.0.1"
   },
   "files": [
-    "dist/*"
+    "./dist"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
