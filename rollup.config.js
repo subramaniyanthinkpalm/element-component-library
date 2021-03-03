@@ -15,9 +15,10 @@ export default {
     plugins: [
         external(),
         postcss({
-            minimize: true,
-            extensions: ['.css','.less'],
-            extract: path.resolve('dist/index-element.css'),
+            modules: true,
+            // minimize: true,
+            // extensions: ['.css','.less'],
+            // extract: path.resolve('dist/index-element.css'),
         }),
         babel({
             exclude: 'node_modules/**'
