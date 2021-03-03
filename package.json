@@ -61,7 +61,8 @@
     "react-dom": "^17.0.1"
   },
   "files": [
-    "./dist"
+    "./dist",
+    "./dist/index-elment.css"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

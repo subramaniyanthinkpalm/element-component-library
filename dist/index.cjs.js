@@ -15,17 +15,18 @@ function HelloWorld() {
   return /*#__PURE__*/React__default['default'].createElement("h1", null, "Hello World");
 }
 
-var Button = function Button(_ref) {
-  var children = _ref.children,
-      color = _ref.color,
-      size = _ref.size,
-      className = _ref.className,
-      basic = _ref.basic,
-      disabled = _ref.disabled;
+const Button = ({
+  children,
+  color,
+  size,
+  className,
+  basic,
+  disabled
+}) => {
   return /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button, {
     disabled: disabled,
     basic: basic,
-    className: "".concat(className, " ", "ap_".concat(color), " ").concat(size)
+    className: `${className} ${`ap_${color}`} ${size}`
   }, children));
 };
 

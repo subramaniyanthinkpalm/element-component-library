@@ -17,7 +17,7 @@ export default {
         postcss({
             minimize: true,
             extensions: ['.css','.less'],
-            extract: path.resolve('dist/index-element-js.css'),
+            extract: path.resolve('dist/index-element.css'),
         }),
         babel({
             exclude: 'node_modules/**'
