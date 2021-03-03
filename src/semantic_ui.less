@@ -2253,3 +2253,225 @@ td:last-child {
   border-radius: 15px;
 }
 
+.ap_form input, .ap_form textarea, .ap_form .selection.dropdown{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  padding: 0.9375em 1.125em 1em 0.9375em !important;
+  box-shadow: inset 0em 0.125em 0.1875em -0.0625em rgb(112 136 146 / 10%) !important;
+  border-radius: 0.9375em !important;
+}
+
+.ap_form input:hover, .ap_form input:focus, .ap_form textarea:hover,.ap_form textarea:focus,
+.ap_form .selection.dropdown:hover{
+  border: 1px solid #63C6C0 !important;
+}
+
+.ap_form.grey input,.ap_form.grey textarea, .ap_form.grey .selection.dropdown{
+  background-color: #F8F8F8 !important;
+}
+
+.ap_form.grey .ui.buttons, .ap_form.grey .ui.button, .ap_form.grey .ui.floating.dropdown.button.icon {
+  background: #F8F8F8 !important;
+}
+.ap_form .ui.buttons{
+  background: #FFFFFF;
+  box-shadow: 1px 3px 6px rgb(112 136 146 / 16%) !important;
+  border-radius: 15px !important;
+  width: 100%;
+  height: 3.13rem;
+}
+
+.ap_form .ui.button {
+  background: #FFFFFF;
+  border-radius: 0.9375em !important;
+  color: #8BA2AB;
+  width:90%;
+}
+
+.ap_form .ui.floating.dropdown.button.icon {
+  background: #ffffff;
+  box-shadow: 1px 3px 6px rgb(112 136 146 / 16%) !important;
+  border-radius: 0 !important;
+  position: relative !important;
+  border-left: 1px solid;
+  border-top-right-radius: 0.9375em !important;
+  border-bottom-right-radius: 0.9375em !important;
+  width: 10%;
+}
+
+.ap_form i.dropdown.icon {
+  position: absolute !important;
+  font-size: 1.6em !important;
+  left: -22%;
+  right: 0%;
+  top: 25%;
+  bottom: 0%;
+}
+
+.ap_form .visible.menu.transition {
+  background: #FFFFFF;
+  box-shadow: 2px 2px 10px rgb(112 136 146 / 20%) !important;
+  border-radius: 23px !important;
+  padding: 0.625em;
+  height: auto;
+}
+
+.ap_form .selected.item {
+  background: rgba(0,0,0,.03) !important;
+  color: rgba(0,0,0,.95) !important;
+  border-radius: 30px;
+}
+
+/* .ap_form i.circle.icon:before {
+  background: #EEF784 !important;
+  border: 0.125em solid #104F56 !important;
+  box-sizing: border-box;
+  border-radius: 0.9375em !important;
+  color: #EEF784 !important;
+  font-size: 12px;
+  padding: 0.1875em 0.25em;
+} */
+
+/* .ap_form .ui.button:active, .ap_form .ui.button:hover {
+  color: #8BA2AB !important;
+}
+
+.ap_form i.check.circle.icon:before, .ap_icon_dropdown i.check.circle.icon:before {
+  content: "\f00c"; 
+  color:#000 !important;
+} */
+
+.ap_form .ui.dropdown .menu>.item:hover {
+  border-radius: 0.9375em !important;
+}
+
+.ap_form .disabled {
+  opacity: 1 !important;
+}
+
+.ap_form.small input {
+  height :3.125em !important;
+}
+
+.ap.form.large input {
+  height : 3.75em !important;
+}
+
+.ap_form .error input {
+  border: 1px solid #CA1A46 !important;
+  border-radius: 15px !important;
+}
+
+.ap_form .helper{
+  color: #63C6C0;
+  font-size: 0.95em;
+  text-align: left;
+  padding: 0.3125em;
+}
+
+.ap_form .helper.error{
+  color: #CA1A46 !important;
+  font-weight: 500;
+}
+.ap_form .error .delete.icon:before{
+  left: 20% !important;
+  top: 40% !important;
+  color: #CA1A46;
+  border: 1px solid #CA1A46;
+  border-radius: 50%;
+  width: 20px !important;
+  height: 20px;
+  margin: 0;
+  padding-top: 3px;
+  
+}
+
+.ap_form.large .error .delete.icon:before {
+  left: 28% !important;
+  font-size: 13px !important;
+}
+
+.ap_form .check.circle.outline.icon:before{
+  font-size:20px;
+  color:#BED16D !important;
+}
+
+.ap_form label{
+  font-weight: 600 !important;
+  font-size: 0.975em !important;
+  line-height: 140%;
+  color: #8BA2AB !important;
+  border: 0.0625em solid rgba(0, 0, 0, 0.0001);
+}
+
+
+.ap_checkbox.ui.checkbox label:before,.ap_form .checkbox label:before {
+  background: #EEF784 !important;
+  border: 0.125em solid #104F56 !important;
+  box-sizing: border-box;
+  border-radius: 0.9375em !important;
+
+}
+
+.ap_checkbox.ui.checkbox input:checked~label:after,.ap_form .checkbox input:checked~label:after {
+  font-size: 10px !important;
+  color: #000 !important;
+}
+
+.ap_checkbox.small.ui.checkbox label:before, .ap_form .small.checkbox label:before{
+  height:20px;
+  width:20px;
+}
+
+.ap_checkbox.large.ui.checkbox label:before, .ap_form .large.checkbox label:before{
+  height:30px;
+  width:30px;
+  left: -10px;
+}
+
+.ap_checkbox.small.ui.checkbox input:checked~label:after,
+.ap_form .small.checkbox input:checked~label:after
+{
+  font-size: 12px !important;
+  color: #000 !important;
+  top: 2px;
+  left: 2px;
+}
+
+.ap_checkbox.large.ui.checkbox input:checked~label:after,
+.ap_form .large.checkbox input:checked~label:after
+{
+  font-size: 18px !important;
+  color: #000 !important;
+  top: 6px;
+  left: -3px;
+}
+
+
+.ap_input.grey input{
+  background-color: #F8F8F8 !important;
+}
+
+.ap_input .label{
+  position: absolute;
+  background: none;
+  top: -2.3em;
+  color: #104F56 !important;
+  font-weight: bold !important;
+  left: 0.7em;
+  padding: 0;
+}
+
+.ap_input input{
+  border-radius: 0.9375em !important;
+  border: 1px solid rgba(34,36,38,.15) !important;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0.9375em 1.125em 1em 0.9375em;
+  box-shadow: inset 0em 0.125em 0.1875em -0.0625em rgb(112 136 146 / 10%);
+  border-radius: 0.9375em;
+  height: 3.125em;
+  width: 20em;
+}
