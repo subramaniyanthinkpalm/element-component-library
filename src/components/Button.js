@@ -15,14 +15,14 @@ const Button = ({ children,color,size, className, basic,disabled }) => {
       </>
     )
 }
-button.defaultProps = {
+Button.defaultProps = {
   className:'',
   size:'',
   disabled:false,
   basic:false
 };
 
-button.propTypes = {
+Button.propTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
   size:PropTypes.string,

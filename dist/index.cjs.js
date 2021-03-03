@@ -29,13 +29,13 @@ var Button = function Button(_ref) {
   }, children));
 };
 
-button.defaultProps = {
+Button.defaultProps = {
   className: '',
   size: '',
   disabled: false,
   basic: false
 };
-button.propTypes = {
+Button.propTypes = {
   children: PropTypes__default['default'].node.isRequired,
   color: PropTypes__default['default'].string,
   size: PropTypes__default['default'].string,
