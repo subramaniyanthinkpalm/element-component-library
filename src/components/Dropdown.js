@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Dropdown as APDropdown, Input, Form } from 'semantic-ui-react'
-import './CSS/dropdown.css';
+// import './CSS/dropdown.css';
 
 const Dropdown = (props) => {
     const { labelText="Select", options, iconType, search, color, calendar, openDropdown, dropdownHandle, inputHandle } = props;

@@ -9,6 +9,8 @@ import nested from 'postcss-nested';
 import cssnext from 'postcss-cssnext';
 import cssnano from 'cssnano';
 import eslint from 'rollup-plugin-eslint';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs'
 
 export default {
     input: pkg.source,
@@ -33,11 +35,17 @@ export default {
             // extensions: ['.css','.less'],
             // extract: path.resolve('dist/index-element.css'),
         }),
+        // resolve({
+        //     jsnext: true,
+        //     main: true,
+        //     browser: true,
+        // }),
         // eslint({
         //     exclude: [
         //       'src/styles/**',
         //     ]
         // }),
+        // commonjs(),
         babel({
             exclude: 'node_modules/**'
         }),
