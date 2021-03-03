@@ -37,18 +37,17 @@ function HelloWorld() {
   return /*#__PURE__*/React.createElement("h1", null, "Hello World");
 }
 
-const Button = ({
-  children,
-  color,
-  size,
-  className,
-  basic,
-  disabled
-}) => {
+var Button = function Button(_ref) {
+  var children = _ref.children,
+      color = _ref.color,
+      size = _ref.size,
+      className = _ref.className,
+      basic = _ref.basic,
+      disabled = _ref.disabled;
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Button$1, {
     disabled: disabled,
     basic: basic,
-    className: `${className} ${`ap_${color}`} ${size}`
+    className: "".concat(className, " ", "ap_".concat(color), " ").concat(size)
   }, children));
 };
 
@@ -85,21 +84,20 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-const Dropdown = props => {
-  const {
-    labelText = "Select",
-    options,
-    iconType,
-    search,
-    color,
-    calendar,
-    openDropdown,
-    dropdownHandle,
-    inputHandle
-  } = props;
-  let minutes = [];
+var Dropdown = function Dropdown(props) {
+  var _props$labelText = props.labelText,
+      labelText = _props$labelText === void 0 ? "Select" : _props$labelText,
+      options = props.options;
+      props.iconType;
+      var search = props.search,
+      color = props.color,
+      calendar = props.calendar,
+      openDropdown = props.openDropdown,
+      dropdownHandle = props.dropdownHandle,
+      inputHandle = props.inputHandle;
+  var minutes = [];
 
-  for (let i = 1; i <= 60; i++) {
+  for (var i = 1; i <= 60; i++) {
     minutes.push(i);
   }
 
@@ -111,24 +109,28 @@ const Dropdown = props => {
   }, openDropdown ? {
     open: true
   } : {}), /*#__PURE__*/React.createElement(Dropdown$1.Menu, {
-    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
+    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
   }, /*#__PURE__*/React.createElement(Input, {
     icon: "search",
     iconPosition: "left",
     placeholder: "Name Task",
     className: "search",
-    onClick: () => inputHandle()
+    onClick: function onClick() {
+      return inputHandle();
+    }
   }), props.title && /*#__PURE__*/React.createElement("div", {
     className: "ap_header"
-  }, props.title.map((titleText, index) => /*#__PURE__*/React.createElement(Dropdown$1.Header, {
-    key: index,
-    content: titleText.content,
-    className: `${titleText.class}`
-  }))), props.items.map((item, index) => {
-    let iconsRender = item.icon ? item.icon : '';
+  }, props.title.map(function (titleText, index) {
+    return /*#__PURE__*/React.createElement(Dropdown$1.Header, {
+      key: index,
+      content: titleText.content,
+      className: "".concat(titleText.class)
+    });
+  })), props.items.map(function (item, index) {
+    var iconsRender = item.icon ? item.icon : '';
     return /*#__PURE__*/React.createElement(Dropdown$1.Item, {
       key: index,
-      text: `${item.text}`,
+      text: "".concat(item.text),
       icon: iconsRender
     });
   }))) : props.notification ? /*#__PURE__*/React.createElement("div", {
@@ -137,13 +139,15 @@ const Dropdown = props => {
     className: "menu transition visible"
   }, /*#__PURE__*/React.createElement("div", {
     className: "title"
-  }, "Notifications"), props.data.map(notify => /*#__PURE__*/React.createElement("div", {
-    className: "list"
-  }, /*#__PURE__*/React.createElement("p", {
-    className: "date_time"
-  }, notify.date, ", ", notify.time), /*#__PURE__*/React.createElement("p", {
-    className: "description"
-  }, notify.description, " ", /*#__PURE__*/React.createElement("span", null, notify.taskname)))), /*#__PURE__*/React.createElement("div", {
+  }, "Notifications"), props.data.map(function (notify) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "list"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "date_time"
+    }, notify.date, ", ", notify.time), /*#__PURE__*/React.createElement("p", {
+      className: "description"
+    }, notify.description, " ", /*#__PURE__*/React.createElement("span", null, notify.taskname)));
+  }), /*#__PURE__*/React.createElement("div", {
     className: "view_more"
   }, "View More"))) : props.template ? /*#__PURE__*/React.createElement("div", {
     className: "ui dropdown ap_form_dropdown custom"
@@ -152,7 +156,9 @@ const Dropdown = props => {
     "aria-live": "polite",
     role: "alert",
     className: "divider text",
-    onClick: () => props.onClickEvent()
+    onClick: function onClick() {
+      return props.onClickEvent();
+    }
   }, props.labelText), /*#__PURE__*/React.createElement("i", {
     "aria-hidden": "true",
     className: "plus circle icon"
@@ -164,7 +170,9 @@ const Dropdown = props => {
     placeholder: "Name Task",
     type: "text",
     value: props.inputText,
-    onChange: e => props.inputEvent(e),
+    onChange: function onChange(e) {
+      return props.inputEvent(e);
+    },
     autoFocus: true
   })), props.showButton && /*#__PURE__*/React.createElement("div", {
     className: "task_btns"
@@ -178,36 +186,52 @@ const Dropdown = props => {
     className: "select_option"
   }, "Or Select Task Template"), /*#__PURE__*/React.createElement("div", {
     className: "ap_header"
-  }, props.title.map((header, index) => /*#__PURE__*/React.createElement("div", {
-    key: index,
-    className: `header ${header.value === props.dropdownHeaderValue ? 'active' : ''}`,
-    onClick: () => props.headerTemplateEvent(header.value)
-  }, header.content))), props.title.find(item => item.value === props.dropdownHeaderValue).items.map((headerContent, index) => /*#__PURE__*/React.createElement("div", {
-    role: "option",
-    className: "item",
-    key: index,
-    onClick: () => props.templateValueEvent(headerContent.value)
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "text"
-  }, headerContent.text))))) : props.text ? /*#__PURE__*/React.createElement(Dropdown$1, _extends({
+  }, props.title.map(function (header, index) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: index,
+      className: "header ".concat(header.value === props.dropdownHeaderValue ? 'active' : ''),
+      onClick: function onClick() {
+        return props.headerTemplateEvent(header.value);
+      }
+    }, header.content);
+  })), props.title.find(function (item) {
+    return item.value === props.dropdownHeaderValue;
+  }).items.map(function (headerContent, index) {
+    return /*#__PURE__*/React.createElement("div", {
+      role: "option",
+      className: "item",
+      key: index,
+      onClick: function onClick() {
+        return props.templateValueEvent(headerContent.value);
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "text"
+    }, headerContent.text));
+  }))) : props.text ? /*#__PURE__*/React.createElement(Dropdown$1, _extends({
     text: labelText,
     icon: "angle down",
-    className: `ap_custom_text_dropdown ${props.line ? 'line' : ''}`
+    className: "ap_custom_text_dropdown ".concat(props.line ? 'line' : '')
   }, props.line ? {
     options: options
   } : {}, {
     onChange: props.dropdownHandle
-  }), !props.line ? /*#__PURE__*/React.createElement(Dropdown$1.Menu, null, options && options.map((item, index) => /*#__PURE__*/React.createElement(Dropdown$1.Item, {
-    text: item.text,
-    key: index,
-    onClick: () => props.itemEvent(item.value)
-  }))) : null) : props.color ? /*#__PURE__*/React.createElement("div", {
+  }), !props.line ? /*#__PURE__*/React.createElement(Dropdown$1.Menu, null, options && options.map(function (item, index) {
+    return /*#__PURE__*/React.createElement(Dropdown$1.Item, {
+      text: item.text,
+      key: index,
+      onClick: function onClick() {
+        return props.itemEvent(item.value);
+      }
+    });
+  })) : null) : props.color ? /*#__PURE__*/React.createElement("div", {
     className: "ap_form_dropdown color"
   }, /*#__PURE__*/React.createElement("div", {
     role: "listbox",
     "aria-expanded": "false",
     className: "ui button dropdown icon medium",
-    onClick: () => props.openColorMenu()
+    onClick: function onClick() {
+      return props.openColorMenu();
+    }
   }, /*#__PURE__*/React.createElement("div", {
     "aria-atomic": "true",
     "aria-live": "polite",
@@ -218,82 +242,94 @@ const Dropdown = props => {
     className: "angle down icon"
   }), props.openDropdown && /*#__PURE__*/React.createElement("div", {
     className: "menu transition"
-  }, props.options.map(option => /*#__PURE__*/React.createElement("div", {
-    className: `field ap_dropdown_color ap_dropdown_color_${option.value} `,
-    onClick: () => props.itemEvent(option.value)
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "ui checked fitted checkbox"
-  }, /*#__PURE__*/React.createElement("input", _extends({
-    className: "hidden",
-    type: "checkbox",
-    value: ""
-  }, option.value === props.selected ? {
-    checked: true
-  } : {}, {
-    onChange: () => props.itemEvent(option.value)
-  })), /*#__PURE__*/React.createElement("label", null))))))) : props.customform ? /*#__PURE__*/React.createElement(Form, {
-    className: `ap_form_dropdown customform ${props.scroll ? 'scroll' : ''} ${props.minutes ? 'minutes' : ''}`
+  }, props.options.map(function (option) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "field ap_dropdown_color ap_dropdown_color_".concat(option.value, " "),
+      onClick: function onClick() {
+        return props.itemEvent(option.value);
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "ui checked fitted checkbox"
+    }, /*#__PURE__*/React.createElement("input", _extends({
+      className: "hidden",
+      type: "checkbox",
+      value: ""
+    }, option.value === props.selected ? {
+      checked: true
+    } : {}, {
+      onChange: function onChange() {
+        return props.itemEvent(option.value);
+      }
+    })), /*#__PURE__*/React.createElement("label", null)));
+  })))) : props.customform ? /*#__PURE__*/React.createElement(Form, {
+    className: "ap_form_dropdown customform ".concat(props.scroll ? 'scroll' : '', " ").concat(props.minutes ? 'minutes' : '')
   }, /*#__PURE__*/React.createElement(Form.Field, {
-    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
+    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
   }, !props.nolabel && props.labelText && /*#__PURE__*/React.createElement("label", null, " ", props.labelText, " "), /*#__PURE__*/React.createElement(Dropdown$1, _extends({
     text: props.defaultText ? props.defaultText : "Please Select",
     button: true,
-    className: `icon ${props.large ? 'large' : props.medium ? 'medium' : 'small'}`,
+    className: "icon ".concat(props.large ? 'large' : props.medium ? 'medium' : 'small'),
     icon: "angle down"
   }, props.openDropdownEvent ? {
     open: props.openDropdownEvent
   } : {}), /*#__PURE__*/React.createElement(Dropdown$1.Menu, {
-    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
-  }, props.minutes && minutes.length && minutes.map((minute, index) => /*#__PURE__*/React.createElement(Dropdown$1.Item, {
-    key: index,
-    text: minute,
-    onClick: () => props.itemEvent(minute)
-  })), props.options && props.options.map((item, index) => {
-    let iconsRender = item.icon ? item.icon : '';
+    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
+  }, props.minutes && minutes.length && minutes.map(function (minute, index) {
     return /*#__PURE__*/React.createElement(Dropdown$1.Item, {
       key: index,
-      text: `${item.text}`,
+      text: minute,
+      onClick: function onClick() {
+        return props.itemEvent(minute);
+      }
+    });
+  }), props.options && props.options.map(function (item, index) {
+    var iconsRender = item.icon ? item.icon : '';
+    return /*#__PURE__*/React.createElement(Dropdown$1.Item, {
+      key: index,
+      text: "".concat(item.text),
       icon: iconsRender,
-      onClick: () => props.itemEvent(item.value)
+      onClick: function onClick() {
+        return props.itemEvent(item.value);
+      }
     });
   }))))) : props.form ? /*#__PURE__*/React.createElement(Form, {
     className: "ap_form_dropdown form"
   }, /*#__PURE__*/React.createElement(Form.Field, {
-    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
+    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
   }, props.labelText && /*#__PURE__*/React.createElement("label", null, " ", props.labelText, " "), /*#__PURE__*/React.createElement(Dropdown$1, _extends({
     text: props.defaultText ? props.defaultText : "Please Select",
     button: true,
-    className: `icon ${props.large ? 'large' : props.medium ? 'medium' : 'small'}`,
+    className: "icon ".concat(props.large ? 'large' : props.medium ? 'medium' : 'small'),
     icon: "angle down"
   }, props.openDropdownEvent ? {
     open: props.openDropdownEvent
   } : {}), /*#__PURE__*/React.createElement(Dropdown$1.Menu, {
-    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
+    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
   }, props.title && /*#__PURE__*/React.createElement("div", {
     className: "ap_header"
-  }, props.title.map((titleText, index) => /*#__PURE__*/React.createElement(Dropdown$1.Header, {
-    key: index,
-    content: titleText.content,
-    className: `${titleText.value === props.dropdownHeaderValue ? 'active' : ''}`,
-    onClick: () => props.headerTemplateEvent(titleText.value)
-  }))), props.title.find(item => item.value === props.dropdownHeaderValue).items.map((headerContent, index) => {
+  }, props.title.map(function (titleText, index) {
+    return /*#__PURE__*/React.createElement(Dropdown$1.Header, {
+      key: index,
+      content: titleText.content,
+      className: "".concat(titleText.value === props.dropdownHeaderValue ? 'active' : ''),
+      onClick: function onClick() {
+        return props.headerTemplateEvent(titleText.value);
+      }
+    });
+  })), props.title.find(function (item) {
+    return item.value === props.dropdownHeaderValue;
+  }).items.map(function (headerContent, index) {
     return /*#__PURE__*/React.createElement(Dropdown$1.Item, {
       key: index,
-      text: `${headerContent.text}`,
-      onClick: () => props.templateValueEvent(headerContent.value)
+      text: "".concat(headerContent.text),
+      onClick: function onClick() {
+        return props.templateValueEvent(headerContent.value);
+      }
     });
   }))))) : props.image ? /*#__PURE__*/React.createElement(Button$1.Group, {
-    className: `
-                                ${props.active ? 'active' : props.disabled ? 'disabled' : ''}
-                                ${props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown'} 
-                                ${props.medium ? 'medium' : 'small'} 
-                                ${props.bg_white ? 'bg_white' : ''} 
-                                ${props.type === 'dots' || props.show ? 'light_green' : ''}    
-                                ${calendar ? 'calendar' : ''}
-                                ${props.image ? 'image' : props.input ? 'input' : ''}
-                            `
+    className: "\n                                ".concat(props.active ? 'active' : props.disabled ? 'disabled' : '', "\n                                ").concat(props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown', " \n                                ").concat(props.medium ? 'medium' : 'small', " \n                                ").concat(props.bg_white ? 'bg_white' : '', " \n                                ").concat(props.type === 'dots' || props.show ? 'light_green' : '', "    \n                                ").concat(calendar ? 'calendar' : '', "\n                                ").concat(props.image ? 'image' : props.input ? 'input' : '', "\n                            ")
   }, /*#__PURE__*/React.createElement(Dropdown$1, {
-    className: `button icon ${props.show ? 'remove_icon' : ''}`,
+    className: "button icon ".concat(props.show ? 'remove_icon' : ''),
     floating: true,
     trigger: /*#__PURE__*/React.createElement(React.Fragment, null),
     open: true
@@ -302,24 +338,30 @@ const Dropdown = props => {
     iconPosition: "left",
     className: "search ap_input grey",
     value: props.inputText,
-    onClick: () => props.stayOpenEvent(),
-    onChange: e => props.inputEvent(e),
+    onClick: function onClick() {
+      return props.stayOpenEvent();
+    },
+    onChange: function onChange(e) {
+      return props.inputEvent(e);
+    },
     autoFocus: true
-  }), options.map(option => /*#__PURE__*/React.createElement(Dropdown$1.Item, _extends({
-    key: option.value
-  }, option, {
-    onClick: () => props.itemEvent(option.value)
-  })))))) : props.custom ? /*#__PURE__*/React.createElement(Button$1.Group, {
-    className: ` ${props.icon ? 'ap_icon_dropdown' : 'ap_dropdown'} 
-                            ${props.active ? 'active' : props.disabled ? 'disabled' : ''}
-                            ${props.medium ? 'medium' : 'small'} ${props.filter ? 'sort_dropdown' : ''} `
+  }), options.map(function (option) {
+    return /*#__PURE__*/React.createElement(Dropdown$1.Item, _extends({
+      key: option.value
+    }, option, {
+      onClick: function onClick() {
+        return props.itemEvent(option.value);
+      }
+    }));
+  })))) : props.custom ? /*#__PURE__*/React.createElement(Button$1.Group, {
+    className: " ".concat(props.icon ? 'ap_icon_dropdown' : 'ap_dropdown', " \n                            ").concat(props.active ? 'active' : props.disabled ? 'disabled' : '', "\n                            ").concat(props.medium ? 'medium' : 'small', " ").concat(props.filter ? 'sort_dropdown' : '', " ")
   }, labelText && /*#__PURE__*/React.createElement(Button$1, null, labelText), /*#__PURE__*/React.createElement(Dropdown$1, _extends({
     className: "button icon",
     floating: true,
     trigger: /*#__PURE__*/React.createElement(React.Fragment, null)
   }, props.openDropdown ? {
     open: props.openDropdown
-  } : {}), /*#__PURE__*/React.createElement(Dropdown$1.Menu, null, options && options.map((option, index) => {
+  } : {}), /*#__PURE__*/React.createElement(Dropdown$1.Menu, null, options && options.map(function (option, index) {
     return /*#__PURE__*/React.createElement(Dropdown$1.Item, _extends({
       text: option.text,
       key: index,
@@ -328,14 +370,10 @@ const Dropdown = props => {
     }, option.icon ? {
       icon: option.icon
     } : {}, {
-      className: ` ${option.active ? 'active' : ''}`
+      className: " ".concat(option.active ? 'active' : '')
     }));
   })))) : props.search ? /*#__PURE__*/React.createElement(Button$1.Group, {
-    className: `
-                            ${props.active ? 'active' : props.disabled ? 'disabled' : ''}
-                            ${props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown'} 
-                            ${props.medium ? 'medium' : 'small'} 
-                        `,
+    className: "\n                            ".concat(props.active ? 'active' : props.disabled ? 'disabled' : '', "\n                            ").concat(props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown', " \n                            ").concat(props.medium ? 'medium' : 'small', " \n                        "),
     onClick: props.onClickEvent
   }, labelText && /*#__PURE__*/React.createElement(Button$1, null, labelText), /*#__PURE__*/React.createElement("div", {
     role: "listbox",
@@ -352,30 +390,29 @@ const Dropdown = props => {
   }, /*#__PURE__*/React.createElement("input", {
     type: "text",
     value: props.inputText,
-    onChange: e => props.inputEvent(e)
+    onChange: function onChange(e) {
+      return props.inputEvent(e);
+    }
   }), /*#__PURE__*/React.createElement("i", {
     "aria-hidden": "true",
     className: "search icon"
-  })), props.options.map(option => /*#__PURE__*/React.createElement("div", {
-    role: "option",
-    className: `${option.icon === 'check circle' ? 'selected' : ''} item`,
-    onClick: () => props.itemEvent(option.value)
-  }, /*#__PURE__*/React.createElement("i", {
-    "aria-hidden": "true",
-    className: `${option.icon} icon`
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "text"
-  }, option.text)))))) : /*#__PURE__*/React.createElement(Button$1.Group, {
-    className: `
-                            ${props.active ? 'active' : props.disabled ? 'disabled' : ''}
-                            ${props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown'} 
-                            ${props.medium ? 'medium' : 'small'} 
-                            ${props.bg_white ? 'bg_white' : ''} 
-                            ${props.type === 'dots' || props.show ? 'light_green' : ''}    
-                            ${calendar ? 'calendar' : ''}
-                        `
+  })), props.options.map(function (option) {
+    return /*#__PURE__*/React.createElement("div", {
+      role: "option",
+      className: "".concat(option.icon === 'check circle' ? 'selected' : '', " item"),
+      onClick: function onClick() {
+        return props.itemEvent(option.value);
+      }
+    }, /*#__PURE__*/React.createElement("i", {
+      "aria-hidden": "true",
+      className: "".concat(option.icon, " icon")
+    }), /*#__PURE__*/React.createElement("span", {
+      className: "text"
+    }, option.text));
+  })))) : /*#__PURE__*/React.createElement(Button$1.Group, {
+    className: "\n                            ".concat(props.active ? 'active' : props.disabled ? 'disabled' : '', "\n                            ").concat(props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown', " \n                            ").concat(props.medium ? 'medium' : 'small', " \n                            ").concat(props.bg_white ? 'bg_white' : '', " \n                            ").concat(props.type === 'dots' || props.show ? 'light_green' : '', "    \n                            ").concat(calendar ? 'calendar' : '', "\n                        ")
   }, labelText && /*#__PURE__*/React.createElement(Button$1, null, labelText), /*#__PURE__*/React.createElement(Dropdown$1, _extends({
-    className: `button icon ${props.show ? 'remove_icon' : ''}`,
+    className: "button icon ".concat(props.show ? 'remove_icon' : ''),
     floating: true,
     trigger: /*#__PURE__*/React.createElement(React.Fragment, null),
     onChange: props.dropdownHandle
@@ -392,10 +429,14 @@ const Dropdown = props => {
     iconPosition: "left",
     className: "search ap_input grey",
     value: props.inputText,
-    onClick: () => props.stayOpenEvent(),
-    onChange: e => props.inputEvent(e),
+    onClick: function onClick() {
+      return props.stayOpenEvent();
+    },
+    onChange: function onChange(e) {
+      return props.inputEvent(e);
+    },
     autoFocus: true
-  }), options && options.map((option, index) => {
+  }), options && options.map(function (option, index) {
     return option.type !== 'undefined' && option.type === 'label' ? /*#__PURE__*/React.createElement(Dropdown$1.Header, {
       content: option.text
     }) : /*#__PURE__*/React.createElement(Dropdown$1.Item, _extends({
@@ -406,15 +447,17 @@ const Dropdown = props => {
     }, option.icon ? {
       icon: option.icon
     } : {}, {
-      className: ` ${option.active ? 'active' : ''}`
+      className: " ".concat(option.active ? 'active' : '')
     }));
-  })) : color && /*#__PURE__*/React.createElement(Dropdown$1.Menu, null, options && options.map(color => {
-    let checked1 = color.value === 'red' ? {
+  })) : color && /*#__PURE__*/React.createElement(Dropdown$1.Menu, null, options && options.map(function (color) {
+    var checked1 = color.value === 'red' ? {
       checked: true
     } : '';
     return /*#__PURE__*/React.createElement("div", {
-      className: `field ap_dropdown_color ap_dropdown_color_${color.value}`,
-      onClick: () => props.itemEvent(color.value)
+      className: "field ap_dropdown_color ap_dropdown_color_".concat(color.value),
+      onClick: function onClick() {
+        return props.itemEvent(color.value);
+      }
     }, /*#__PURE__*/React.createElement("div", {
       className: "ui checked fitted checkbox"
     }, /*#__PURE__*/React.createElement("input", _extends({
@@ -423,7 +466,9 @@ const Dropdown = props => {
       type: "checkbox",
       value: ""
     }, checked1, {
-      onChange: () => props.itemEvent(color.value)
+      onChange: function onChange() {
+        return props.itemEvent(color.value);
+      }
     })), /*#__PURE__*/React.createElement("label", null)));
   })))));
 };
