@@ -22,7 +22,7 @@ var Button = function Button(_ref) {
       className = _ref.className,
       basic = _ref.basic,
       disabled = _ref.disabled;
-  return /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, /*#__PURE__*/React__default['default'].createElement(semanticUiReact.APButton, {
+  return /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button, {
     disabled: disabled,
     basic: basic,
     className: "".concat(className, " ", "ap_".concat(color), " ").concat(size)

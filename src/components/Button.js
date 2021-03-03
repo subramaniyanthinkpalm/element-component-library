@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { APButton } from 'semantic-ui-react'
+import { Button as APButton } from 'semantic-ui-react'
 
 const Button = ({ children,color,size, className, basic,disabled }) => {
 

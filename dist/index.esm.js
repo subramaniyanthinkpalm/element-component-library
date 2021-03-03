@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { APButton } from 'semantic-ui-react';
+import { Button as Button$1 } from 'semantic-ui-react';
 
 function HelloWorld() {
   return /*#__PURE__*/React.createElement("h1", null, "Hello World");
@@ -13,7 +13,7 @@ var Button = function Button(_ref) {
       className = _ref.className,
       basic = _ref.basic,
       disabled = _ref.disabled;
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(APButton, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Button$1, {
     disabled: disabled,
     basic: basic,
     className: "".concat(className, " ", "ap_".concat(color), " ").concat(size)
