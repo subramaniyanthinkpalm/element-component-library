@@ -2,6 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+require('semantic-ui-css/semantic.min.css');
 var React = require('react');
 var PropTypes = require('prop-types');
 var semanticUiReact = require('semantic-ui-react');
@@ -45,18 +46,17 @@ function HelloWorld() {
   return /*#__PURE__*/React__default['default'].createElement("h1", null, "Hello World");
 }
 
-const Button = ({
-  children,
-  color,
-  size,
-  className,
-  basic,
-  disabled
-}) => {
+var Button = function Button(_ref) {
+  var children = _ref.children,
+      color = _ref.color,
+      size = _ref.size,
+      className = _ref.className,
+      basic = _ref.basic,
+      disabled = _ref.disabled;
   return /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button, {
     disabled: disabled,
     basic: basic,
-    className: `${className} ${`ap_${color}`} ${size}`
+    className: "".concat(className, " ", "ap_".concat(color), " ").concat(size)
   }, children));
 };
 
@@ -96,20 +96,21 @@ function _extends() {
 var css_248z = ".ap_custom_color_dropdown{border-radius:15px!important;width:152px;height:3.13rem}.ap_custom_color_dropdown,.ap_custom_color_dropdown .ui.button{background:#8ba2ab;box-shadow:1px 3px 6px rgba(112,136,146,.16)!important}.ap_custom_color_dropdown .ui.button{border-radius:.9375em!important;color:#fff}.ap_custom_color_dropdown .ui.floating.dropdown.button.icon{background:#8ba2ab;box-shadow:1px 3px 6px rgba(112,136,146,.16)!important;border-radius:0!important;position:relative!important;border-left:1px solid;border-top-right-radius:.9375em!important;border-bottom-right-radius:.9375em!important}.ap_custom_color_dropdown .ui.button:active,.ap_custom_color_dropdown .ui.button:hover{color:#fff!important}.ap_custom_color_dropdown i.dropdown.icon{position:absolute!important;font-size:1.6em!important;left:-22%;right:0;top:25%;bottom:0}.ap_custom_color_dropdown .visible.menu.transition{background:#fff;box-shadow:2px 2px 10px rgba(112,136,146,.2)!important;border-radius:23px!important;width:190px;padding:.625em;height:auto;left:-7.5em!important;right:0;top:2.1em;overflow:auto}.ap_custom_dot_dropdown .dropdown.button.icon{background:none!important;font-size:20px;color:#bed16d;padding:0}.ap_dropdown_color{display:inline;margin:0 .3125em}.ap_dropdown_color .ui.fitted.checkbox label:before{box-sizing:border-box;border-radius:.9375em!important;border:none!important}.ap_dropdown_color_red .ui.fitted.checkbox label:before{background:rgba(230,11,11,.897)!important}.ap_dropdown_color_blue .ui.fitted.checkbox label:before{background:#00f!important}.ap_dropdown_color .ui.checkbox input:checked~.box:after,.ui.checkbox input:checked~label:after{color:#fff;font-size:9px}.ap_form_dropdown .field{width:22.5em}.ap_form_dropdown .ui.dropdown{background:#f8f8f8;border:1px solid #8ba2ab;box-sizing:border-box;box-shadow:inset 0 2px 3px -1px rgba(112,136,146,.05);border-radius:15px!important;position:relative;color:#104f56!important;width:360px!important;height:50px!important;padding:13px}.ap_form_dropdown .divider.text{text-align:left;width:81%}.ap_form_dropdown{font-family:Poppins}.ap_form_dropdown .small{width:12.5em!important}.ap_form_dropdown .medium{width:14.375em!important;height:auto!important}.ap_form_dropdown .large{width:24.5em!important}.ap_form_dropdown label{color:#8ba2ab!important}.ap_form_dropdown .angle.down.icon,.ap_form_dropdown .angle.up.icon{position:absolute;right:.625em;font-size:1.375em;top:.9em}.ap_form_dropdown .visible.menu.transition .header{display:inline;background:#f0f3f4;border-radius:.975em;padding:.625em!important;margin:.3em .5em!important;width:136px!important;text-transform:none;cursor:pointer;font-size:.9375em;color:#104f56!important;border-bottom:none;box-shadow:none;white-space:nowrap;overflow:hidden;text-align:center;font-family:Poppins;text-overflow:ellipsis}.ap_form_dropdown .ui.button.medium div{grid-column-gap:1px}.ap_form_dropdown .visible.menu.transition .header.active{background:#104f56;border-radius:.95em;color:#fff!important;width:136px!important;height:36px}.ap_form_dropdown .ui.active.button:hover{background-color:#f8f8f8}.ap_form_dropdown .ui.dropdown .menu>.item{color:#104f56;font-weight:500;font-size:16px;line-height:24px}.ap_form_dropdown.color .menu.transition.medium{display:block}.ap_form_dropdown.customform .menu.transition.visible .item i{display:inline}.ap_form_dropdown.color .field.ap_dropdown_color.ap_dropdown_color_red{display:inline;width:10px}.ap_form_dropdown.color .menu.transition{background:#fff;box-shadow:2px 2px 10px rgba(112,136,146,.2)!important;border-radius:23px!important;width:190px;padding:.625em;height:auto;right:0;top:3.1em;overflow:auto}.ap_form_dropdown.color .menu.transition .ui.checkbox input:checked~label:after{color:#fff;font-size:9px}.ap_form_dropdown.form .ap_header{margin-bottom:.6em!important}.ap_form_dropdown.form .item i.icon{display:none}.ap_form_dropdown .dropdown .header.text{color:#104f56}.ap_custom_text_dropdown .menu>.item:hover,.ap_form_dropdown .ui.dropdown .menu>.item:hover{background:#f8f8f8;border-radius:1.875em;font-weight:600}.ap_header{margin-top:1.5625em;margin-bottom:1.875em!important}.ap_form_dropdown i.check.circle.icon:before{content:\"\\f00c\";color:#000!important}.ap_custom_text_dropdown{color:#63c6c0;font-style:normal;font-weight:600;font-size:1.225em;line-height:1.5625em}.ap_custom_search_dropdown{background:#8ba2ab!important}.ap_custom_search_dropdown,.ap_dropdown{box-shadow:1px 3px 6px rgba(112,136,146,.16)!important;border-radius:15px!important;width:152px;height:3.13rem}.ap_dropdown{background:#8ba2ab}.ap_dropdown.active:hover,.ap_dropdown.active:hover .ui.button,.ap_dropdown.active:hover .ui.floating.dropdown.button.icon{background:#708892}.ap_dropdown.disabled,.ap_dropdown.disabled .ui.button,.ap_dropdown.disabled .ui.floating.dropdown.button.icon{pointer-events:none;background:#c5d0d5}.ap_dropdown .ui.button{border-radius:.9375em!important;color:#fff}.ap_dropdown .ui.button,.ap_dropdown .ui.floating.dropdown.button.icon{background:#8ba2ab;box-shadow:1px 3px 6px rgba(112,136,146,.16)!important}.ap_dropdown .ui.floating.dropdown.button.icon{border-radius:0!important;position:relative!important;border-left:1px solid;border-top-right-radius:.9375em!important;border-bottom-right-radius:.9375em!important}.ap_dropdown i.dropdown.icon{position:absolute!important;font-size:1.6em!important;left:-22%;right:0;top:25%;bottom:0}.ap_dropdown .visible.menu.transition{background:#fff;box-shadow:2px 2px 10px rgba(112,136,146,.2)!important;border-radius:23px!important;width:190px;padding:.625em;height:auto;left:-10.5em!important;right:0;top:2.1em;overflow:auto}.ap_icon_dropdown.image .ui.dropdown .item img{border-radius:50%;height:30px;width:30px}.ap_icon_dropdown.image.input .menu.transition.visible{height:auto;max-height:300px;overflow-y:auto}.ap_custom_text_dropdown .selected.item,.ap_dropdown .selected.item{background:rgba(0,0,0,.03)!important;color:rgba(0,0,0,.95)!important;border-radius:30px}.ap_icon_dropdown .remove_icon .dropdown.icon,.ap_icon_dropdown .remove_icon i.ellipsis.horizontal.icon{display:none}.ap_icon_dropdown .remove_icon .visible.menu.transition{top:1px;left:1px!important}.ap_custom_text_dropdown i.circle.icon:before,.ap_dropdown i.circle.icon:before,.ap_form_dropdown.customform i.circle.icon:before,.ap_icon_dropdown i.circle.icon:before{background:#eef784!important;border:.125em solid #104f56!important;box-sizing:border-box;border-radius:.9375em!important;color:#eef784!important;font-size:12px;padding:.1875em .25em}.ap_dropdown .ui.button:active,.ap_dropdown .ui.button:hover{color:#fff!important}.ap_form_dropdown.customform.minutes,.ap_form_dropdown.customform.minutes .ui.button.dropdown.icon.medium{width:10.375em!important}.ap_form_dropdown.customform.minutes .divider.text{font-size:35px}.ap_dropdown i.check.circle.icon:before,.ap_form_dropdown.customform i.check.circle.icon:before,.ap_icon_dropdown i.check.circle.icon:before{content:\"\\f00c\";color:#000!important}.ap_form_dropdown.customform.scroll .menu.transition.visible{height:160px!important}.ap_dropdown .ui.dropdown .menu>.item:hover{border-radius:.9375em!important}.ui.buttons.ap_icon_dropdown button{display:none}.ap_icon_dropdown .ui.floating.dropdown.button.icon{background:#8ba2ab!important;color:#fff;width:40px;height:40px;border-radius:50%;position:relative}.ap_icon_dropdown.bg_white .ui.floating.dropdown.button.icon{background:#fff!important;color:#000!important;font-size:20px;padding:.375em}.ap_icon_dropdown.light_green .ui.floating.dropdown.button.icon{color:#bed16d!important;background:#fff!important;box-shadow:none!important;height:30px!important}.ap_icon_dropdown i.dropdown.icon,.ap_icon_dropdown i.ellipsis.horizontal.icon{position:absolute!important;top:.49em;left:.7125em;font-size:20px!important;padding:0!important}.ap_icon_dropdown i.ellipsis.horizontal.icon{top:.775em}.ap_form_dropdown .menu.transition.large,.ap_form_dropdown .menu.transition.medium,.ap_form_dropdown .menu.transition.small{display:none}.ap_form_dropdown .menu.transition.visible.small .item{padding-left:0!important}.ap_form_dropdown .ui.left.icon.input.search input{background:#f8f8f8;box-shadow:inset 0 2px 3px -1px rgba(112,136,146,.05);border-radius:15px!important;width:20.125em;height:3.125em}.ap_form_dropdown.custom{position:relative}.ap_form_dropdown.custom .menu.transition.visible .select_option{font-weight:600;font-size:16px;line-height:24px;color:#bed16d;padding-left:15px}.ap_form_dropdown.custom .menu.transition.visible .item{font-style:normal;font-weight:400;font-size:15px;line-height:22px;color:#104f56;padding-left:15px!important}.ap_form_dropdown.custom .menu.transition.visible .item:hover{border-radius:30px;font-weight:600}.ap_custom_text_dropdown .menu.transition .item{font-style:normal;font-weight:400;font-size:15px;line-height:22px;color:#104f56}.ap_custom_text_dropdown .menu.transition .item:hover{font-weight:600}.ap_form_dropdown.custom .divider.text{width:100%;padding-left:30px}.ap_form_dropdown.custom .divider.text,.ap_form_dropdown.custom .plus{color:#63c6c0;font-style:normal;font-weight:600;font-size:1.225em;line-height:1.5625em}.ap_form_dropdown.custom .plus{position:absolute;left:1px}.ap_custom_dot_dropdown .visible.menu.transition,.ap_custom_text_dropdown .visible.menu.transition,.ap_form_dropdown .visible.menu.transition,.ap_icon_dropdown .visible.menu.transition,.ap_notification .visible.menu.transition{background:#fff;box-shadow:2px 2px 10px rgba(112,136,146,.2)!important;border-radius:23px!important;width:190px;padding:.625em;height:auto;overflow:auto}.ap_custom_text_dropdown.line{color:#104f56;font-style:normal;font-weight:600;font-size:1.225em;line-height:1.5625em;border-bottom:3px solid #104f56}.ap_custom_text_dropdown.line .divider.text{padding:6px}.ap_custom_dot_dropdown .selected.item,.ap_icon_dropdown .item:hover,.ap_icon_dropdown .selected.item{background:rgba(0,0,0,.03)!important;color:#104f56;background:#f8f8f8;border-radius:30px!important}.ap_custom_dot_dropdown .menu>.item:hover,.ap_custom_text_dropdown .ui.dropdown .menu>.item:hover{border-radius:.9375em!important}.ap_dropdown.medium{height:50px;width:185px}.ap_dropdown.small{height:40px;width:163px}.ap_dropdown.medium button{width:62%}.ap_dropdown.small button{width:65%}.ap_custom_text_dropdown.line span.text,.ap_dropdown .ui.floating.dropdown.button.icon span.text{font-style:normal;font-weight:400;font-size:15px;line-height:22px;color:#104f56}.ap_icon_dropdown .item span.text{font-style:normal!important;font-weight:500!important;font-size:16px!important;line-height:24px!important;color:#104f56!important}.ap_dropdown .selected.item span.text,.ap_icon_dropdown .item span.text:hover,.ap_icon_dropdown .selected.item span.text{font-weight:600!important}.ap_custom_text_dropdown span.text{font-size:.9375em;line-height:1.375em;color:#104f56}.ap_icon_dropdown.medium,.ap_icon_dropdown.medium .ui.floating.dropdown.button.icon{width:50px;height:50px}.ap_icon_dropdown.small,.ap_icon_dropdown.small .ui.floating.dropdown.button.icon{width:40px;height:40px}.ap_icon_dropdown.medium i.dropdown.icon{top:.79em!important;left:.9125em!important}.ui.left.icon.input.search input{border-radius:.9375em!important}.ap_dropdown.calendar{width:185px!important;float:right}.ap_dropdown.calendar button{width:68%}.ap_dropdown.calendar .visible.menu.transition{left:-150px!important;width:185px;height:369px;overflow-y:scroll}.ap_dropdown.calendar .visible.menu.transition .header{font-style:normal;font-weight:600;font-size:15px;line-height:23px;color:#8ba2ab;mix-blend-mode:normal;opacity:.7;border:none;box-shadow:0 0 #fff}.ap_dropdown.calendar .visible.menu.transition .item .text{font-style:normal;font-weight:400;font-size:15px;color:#104f56}.ap_dropdown.calendar .visible.menu.transition .item.active{background:rgba(0,0,0,.05);border-radius:15px}";
 styleInject(css_248z);
 
-var Dropdown = function Dropdown(props) {
-  var _props$labelText = props.labelText,
-      labelText = _props$labelText === void 0 ? "Select" : _props$labelText,
-      options = props.options;
-      props.iconType;
-      var search = props.search,
-      color = props.color,
-      calendar = props.calendar,
-      openDropdown = props.openDropdown,
-      dropdownHandle = props.dropdownHandle,
-      inputHandle = props.inputHandle;
-  var minutes = [];
+const Dropdown = props => {
+  const {
+    labelText = "Select",
+    options,
+    iconType,
+    search,
+    color,
+    calendar,
+    openDropdown,
+    dropdownHandle,
+    inputHandle
+  } = props;
+  let minutes = [];
 
-  for (var i = 1; i <= 60; i++) {
+  for (let i = 1; i <= 60; i++) {
     minutes.push(i);
   }
 
@@ -121,28 +122,24 @@ var Dropdown = function Dropdown(props) {
   }, openDropdown ? {
     open: true
   } : {}), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, {
-    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
+    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
   }, /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Input, {
     icon: "search",
     iconPosition: "left",
     placeholder: "Name Task",
     className: "search",
-    onClick: function onClick() {
-      return inputHandle();
-    }
+    onClick: () => inputHandle()
   }), props.title && /*#__PURE__*/React__default['default'].createElement("div", {
     className: "ap_header"
-  }, props.title.map(function (titleText, index) {
-    return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Header, {
-      key: index,
-      content: titleText.content,
-      className: "".concat(titleText.class)
-    });
-  })), props.items.map(function (item, index) {
-    var iconsRender = item.icon ? item.icon : '';
+  }, props.title.map((titleText, index) => /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Header, {
+    key: index,
+    content: titleText.content,
+    className: `${titleText.class}`
+  }))), props.items.map((item, index) => {
+    let iconsRender = item.icon ? item.icon : '';
     return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, {
       key: index,
-      text: "".concat(item.text),
+      text: `${item.text}`,
       icon: iconsRender
     });
   }))) : props.notification ? /*#__PURE__*/React__default['default'].createElement("div", {
@@ -151,15 +148,13 @@ var Dropdown = function Dropdown(props) {
     className: "menu transition visible"
   }, /*#__PURE__*/React__default['default'].createElement("div", {
     className: "title"
-  }, "Notifications"), props.data.map(function (notify) {
-    return /*#__PURE__*/React__default['default'].createElement("div", {
-      className: "list"
-    }, /*#__PURE__*/React__default['default'].createElement("p", {
-      className: "date_time"
-    }, notify.date, ", ", notify.time), /*#__PURE__*/React__default['default'].createElement("p", {
-      className: "description"
-    }, notify.description, " ", /*#__PURE__*/React__default['default'].createElement("span", null, notify.taskname)));
-  }), /*#__PURE__*/React__default['default'].createElement("div", {
+  }, "Notifications"), props.data.map(notify => /*#__PURE__*/React__default['default'].createElement("div", {
+    className: "list"
+  }, /*#__PURE__*/React__default['default'].createElement("p", {
+    className: "date_time"
+  }, notify.date, ", ", notify.time), /*#__PURE__*/React__default['default'].createElement("p", {
+    className: "description"
+  }, notify.description, " ", /*#__PURE__*/React__default['default'].createElement("span", null, notify.taskname)))), /*#__PURE__*/React__default['default'].createElement("div", {
     className: "view_more"
   }, "View More"))) : props.template ? /*#__PURE__*/React__default['default'].createElement("div", {
     className: "ui dropdown ap_form_dropdown custom"
@@ -168,9 +163,7 @@ var Dropdown = function Dropdown(props) {
     "aria-live": "polite",
     role: "alert",
     className: "divider text",
-    onClick: function onClick() {
-      return props.onClickEvent();
-    }
+    onClick: () => props.onClickEvent()
   }, props.labelText), /*#__PURE__*/React__default['default'].createElement("i", {
     "aria-hidden": "true",
     className: "plus circle icon"
@@ -182,9 +175,7 @@ var Dropdown = function Dropdown(props) {
     placeholder: "Name Task",
     type: "text",
     value: props.inputText,
-    onChange: function onChange(e) {
-      return props.inputEvent(e);
-    },
+    onChange: e => props.inputEvent(e),
     autoFocus: true
   })), props.showButton && /*#__PURE__*/React__default['default'].createElement("div", {
     className: "task_btns"
@@ -198,52 +189,36 @@ var Dropdown = function Dropdown(props) {
     className: "select_option"
   }, "Or Select Task Template"), /*#__PURE__*/React__default['default'].createElement("div", {
     className: "ap_header"
-  }, props.title.map(function (header, index) {
-    return /*#__PURE__*/React__default['default'].createElement("div", {
-      key: index,
-      className: "header ".concat(header.value === props.dropdownHeaderValue ? 'active' : ''),
-      onClick: function onClick() {
-        return props.headerTemplateEvent(header.value);
-      }
-    }, header.content);
-  })), props.title.find(function (item) {
-    return item.value === props.dropdownHeaderValue;
-  }).items.map(function (headerContent, index) {
-    return /*#__PURE__*/React__default['default'].createElement("div", {
-      role: "option",
-      className: "item",
-      key: index,
-      onClick: function onClick() {
-        return props.templateValueEvent(headerContent.value);
-      }
-    }, /*#__PURE__*/React__default['default'].createElement("span", {
-      className: "text"
-    }, headerContent.text));
-  }))) : props.text ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown, _extends({
+  }, props.title.map((header, index) => /*#__PURE__*/React__default['default'].createElement("div", {
+    key: index,
+    className: `header ${header.value === props.dropdownHeaderValue ? 'active' : ''}`,
+    onClick: () => props.headerTemplateEvent(header.value)
+  }, header.content))), props.title.find(item => item.value === props.dropdownHeaderValue).items.map((headerContent, index) => /*#__PURE__*/React__default['default'].createElement("div", {
+    role: "option",
+    className: "item",
+    key: index,
+    onClick: () => props.templateValueEvent(headerContent.value)
+  }, /*#__PURE__*/React__default['default'].createElement("span", {
+    className: "text"
+  }, headerContent.text))))) : props.text ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown, _extends({
     text: labelText,
     icon: "angle down",
-    className: "ap_custom_text_dropdown ".concat(props.line ? 'line' : '')
+    className: `ap_custom_text_dropdown ${props.line ? 'line' : ''}`
   }, props.line ? {
     options: options
   } : {}, {
     onChange: props.dropdownHandle
-  }), !props.line ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, null, options && options.map(function (item, index) {
-    return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, {
-      text: item.text,
-      key: index,
-      onClick: function onClick() {
-        return props.itemEvent(item.value);
-      }
-    });
-  })) : null) : props.color ? /*#__PURE__*/React__default['default'].createElement("div", {
+  }), !props.line ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, null, options && options.map((item, index) => /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, {
+    text: item.text,
+    key: index,
+    onClick: () => props.itemEvent(item.value)
+  }))) : null) : props.color ? /*#__PURE__*/React__default['default'].createElement("div", {
     className: "ap_form_dropdown color"
   }, /*#__PURE__*/React__default['default'].createElement("div", {
     role: "listbox",
     "aria-expanded": "false",
     className: "ui button dropdown icon medium",
-    onClick: function onClick() {
-      return props.openColorMenu();
-    }
+    onClick: () => props.openColorMenu()
   }, /*#__PURE__*/React__default['default'].createElement("div", {
     "aria-atomic": "true",
     "aria-live": "polite",
@@ -254,94 +229,82 @@ var Dropdown = function Dropdown(props) {
     className: "angle down icon"
   }), props.openDropdown && /*#__PURE__*/React__default['default'].createElement("div", {
     className: "menu transition"
-  }, props.options.map(function (option) {
-    return /*#__PURE__*/React__default['default'].createElement("div", {
-      className: "field ap_dropdown_color ap_dropdown_color_".concat(option.value, " "),
-      onClick: function onClick() {
-        return props.itemEvent(option.value);
-      }
-    }, /*#__PURE__*/React__default['default'].createElement("div", {
-      className: "ui checked fitted checkbox"
-    }, /*#__PURE__*/React__default['default'].createElement("input", _extends({
-      className: "hidden",
-      type: "checkbox",
-      value: ""
-    }, option.value === props.selected ? {
-      checked: true
-    } : {}, {
-      onChange: function onChange() {
-        return props.itemEvent(option.value);
-      }
-    })), /*#__PURE__*/React__default['default'].createElement("label", null)));
-  })))) : props.customform ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Form, {
-    className: "ap_form_dropdown customform ".concat(props.scroll ? 'scroll' : '', " ").concat(props.minutes ? 'minutes' : '')
+  }, props.options.map(option => /*#__PURE__*/React__default['default'].createElement("div", {
+    className: `field ap_dropdown_color ap_dropdown_color_${option.value} `,
+    onClick: () => props.itemEvent(option.value)
+  }, /*#__PURE__*/React__default['default'].createElement("div", {
+    className: "ui checked fitted checkbox"
+  }, /*#__PURE__*/React__default['default'].createElement("input", _extends({
+    className: "hidden",
+    type: "checkbox",
+    value: ""
+  }, option.value === props.selected ? {
+    checked: true
+  } : {}, {
+    onChange: () => props.itemEvent(option.value)
+  })), /*#__PURE__*/React__default['default'].createElement("label", null))))))) : props.customform ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Form, {
+    className: `ap_form_dropdown customform ${props.scroll ? 'scroll' : ''} ${props.minutes ? 'minutes' : ''}`
   }, /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Form.Field, {
-    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
+    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
   }, !props.nolabel && props.labelText && /*#__PURE__*/React__default['default'].createElement("label", null, " ", props.labelText, " "), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown, _extends({
     text: props.defaultText ? props.defaultText : "Please Select",
     button: true,
-    className: "icon ".concat(props.large ? 'large' : props.medium ? 'medium' : 'small'),
+    className: `icon ${props.large ? 'large' : props.medium ? 'medium' : 'small'}`,
     icon: "angle down"
   }, props.openDropdownEvent ? {
     open: props.openDropdownEvent
   } : {}), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, {
-    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
-  }, props.minutes && minutes.length && minutes.map(function (minute, index) {
+    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
+  }, props.minutes && minutes.length && minutes.map((minute, index) => /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, {
+    key: index,
+    text: minute,
+    onClick: () => props.itemEvent(minute)
+  })), props.options && props.options.map((item, index) => {
+    let iconsRender = item.icon ? item.icon : '';
     return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, {
       key: index,
-      text: minute,
-      onClick: function onClick() {
-        return props.itemEvent(minute);
-      }
-    });
-  }), props.options && props.options.map(function (item, index) {
-    var iconsRender = item.icon ? item.icon : '';
-    return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, {
-      key: index,
-      text: "".concat(item.text),
+      text: `${item.text}`,
       icon: iconsRender,
-      onClick: function onClick() {
-        return props.itemEvent(item.value);
-      }
+      onClick: () => props.itemEvent(item.value)
     });
   }))))) : props.form ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Form, {
     className: "ap_form_dropdown form"
   }, /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Form.Field, {
-    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
+    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
   }, props.labelText && /*#__PURE__*/React__default['default'].createElement("label", null, " ", props.labelText, " "), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown, _extends({
     text: props.defaultText ? props.defaultText : "Please Select",
     button: true,
-    className: "icon ".concat(props.large ? 'large' : props.medium ? 'medium' : 'small'),
+    className: `icon ${props.large ? 'large' : props.medium ? 'medium' : 'small'}`,
     icon: "angle down"
   }, props.openDropdownEvent ? {
     open: props.openDropdownEvent
   } : {}), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, {
-    className: "".concat(props.large ? 'large' : props.medium ? 'medium' : 'small')
+    className: `${props.large ? 'large' : props.medium ? 'medium' : 'small'}`
   }, props.title && /*#__PURE__*/React__default['default'].createElement("div", {
     className: "ap_header"
-  }, props.title.map(function (titleText, index) {
-    return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Header, {
-      key: index,
-      content: titleText.content,
-      className: "".concat(titleText.value === props.dropdownHeaderValue ? 'active' : ''),
-      onClick: function onClick() {
-        return props.headerTemplateEvent(titleText.value);
-      }
-    });
-  })), props.title.find(function (item) {
-    return item.value === props.dropdownHeaderValue;
-  }).items.map(function (headerContent, index) {
+  }, props.title.map((titleText, index) => /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Header, {
+    key: index,
+    content: titleText.content,
+    className: `${titleText.value === props.dropdownHeaderValue ? 'active' : ''}`,
+    onClick: () => props.headerTemplateEvent(titleText.value)
+  }))), props.title.find(item => item.value === props.dropdownHeaderValue).items.map((headerContent, index) => {
     return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, {
       key: index,
-      text: "".concat(headerContent.text),
-      onClick: function onClick() {
-        return props.templateValueEvent(headerContent.value);
-      }
+      text: `${headerContent.text}`,
+      onClick: () => props.templateValueEvent(headerContent.value)
     });
   }))))) : props.image ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button.Group, {
-    className: "\n                                ".concat(props.active ? 'active' : props.disabled ? 'disabled' : '', "\n                                ").concat(props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown', " \n                                ").concat(props.medium ? 'medium' : 'small', " \n                                ").concat(props.bg_white ? 'bg_white' : '', " \n                                ").concat(props.type === 'dots' || props.show ? 'light_green' : '', "    \n                                ").concat(calendar ? 'calendar' : '', "\n                                ").concat(props.image ? 'image' : props.input ? 'input' : '', "\n                            ")
+    className: `
+                                ${props.active ? 'active' : props.disabled ? 'disabled' : ''}
+                                ${props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown'} 
+                                ${props.medium ? 'medium' : 'small'} 
+                                ${props.bg_white ? 'bg_white' : ''} 
+                                ${props.type === 'dots' || props.show ? 'light_green' : ''}    
+                                ${calendar ? 'calendar' : ''}
+                                ${props.image ? 'image' : props.input ? 'input' : ''}
+                            `
   }, /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown, {
-    className: "button icon ".concat(props.show ? 'remove_icon' : ''),
+    className: `button icon ${props.show ? 'remove_icon' : ''}`,
     floating: true,
     trigger: /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null),
     open: true
@@ -350,30 +313,24 @@ var Dropdown = function Dropdown(props) {
     iconPosition: "left",
     className: "search ap_input grey",
     value: props.inputText,
-    onClick: function onClick() {
-      return props.stayOpenEvent();
-    },
-    onChange: function onChange(e) {
-      return props.inputEvent(e);
-    },
+    onClick: () => props.stayOpenEvent(),
+    onChange: e => props.inputEvent(e),
     autoFocus: true
-  }), options.map(function (option) {
-    return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, _extends({
-      key: option.value
-    }, option, {
-      onClick: function onClick() {
-        return props.itemEvent(option.value);
-      }
-    }));
-  })))) : props.custom ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button.Group, {
-    className: " ".concat(props.icon ? 'ap_icon_dropdown' : 'ap_dropdown', " \n                            ").concat(props.active ? 'active' : props.disabled ? 'disabled' : '', "\n                            ").concat(props.medium ? 'medium' : 'small', " ").concat(props.filter ? 'sort_dropdown' : '', " ")
+  }), options.map(option => /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, _extends({
+    key: option.value
+  }, option, {
+    onClick: () => props.itemEvent(option.value)
+  })))))) : props.custom ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button.Group, {
+    className: ` ${props.icon ? 'ap_icon_dropdown' : 'ap_dropdown'} 
+                            ${props.active ? 'active' : props.disabled ? 'disabled' : ''}
+                            ${props.medium ? 'medium' : 'small'} ${props.filter ? 'sort_dropdown' : ''} `
   }, labelText && /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button, null, labelText), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown, _extends({
     className: "button icon",
     floating: true,
     trigger: /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null)
   }, props.openDropdown ? {
     open: props.openDropdown
-  } : {}), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, null, options && options.map(function (option, index) {
+  } : {}), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, null, options && options.map((option, index) => {
     return /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, _extends({
       text: option.text,
       key: index,
@@ -382,10 +339,14 @@ var Dropdown = function Dropdown(props) {
     }, option.icon ? {
       icon: option.icon
     } : {}, {
-      className: " ".concat(option.active ? 'active' : '')
+      className: ` ${option.active ? 'active' : ''}`
     }));
   })))) : props.search ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button.Group, {
-    className: "\n                            ".concat(props.active ? 'active' : props.disabled ? 'disabled' : '', "\n                            ").concat(props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown', " \n                            ").concat(props.medium ? 'medium' : 'small', " \n                        "),
+    className: `
+                            ${props.active ? 'active' : props.disabled ? 'disabled' : ''}
+                            ${props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown'} 
+                            ${props.medium ? 'medium' : 'small'} 
+                        `,
     onClick: props.onClickEvent
   }, labelText && /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button, null, labelText), /*#__PURE__*/React__default['default'].createElement("div", {
     role: "listbox",
@@ -402,29 +363,30 @@ var Dropdown = function Dropdown(props) {
   }, /*#__PURE__*/React__default['default'].createElement("input", {
     type: "text",
     value: props.inputText,
-    onChange: function onChange(e) {
-      return props.inputEvent(e);
-    }
+    onChange: e => props.inputEvent(e)
   }), /*#__PURE__*/React__default['default'].createElement("i", {
     "aria-hidden": "true",
     className: "search icon"
-  })), props.options.map(function (option) {
-    return /*#__PURE__*/React__default['default'].createElement("div", {
-      role: "option",
-      className: "".concat(option.icon === 'check circle' ? 'selected' : '', " item"),
-      onClick: function onClick() {
-        return props.itemEvent(option.value);
-      }
-    }, /*#__PURE__*/React__default['default'].createElement("i", {
-      "aria-hidden": "true",
-      className: "".concat(option.icon, " icon")
-    }), /*#__PURE__*/React__default['default'].createElement("span", {
-      className: "text"
-    }, option.text));
-  })))) : /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button.Group, {
-    className: "\n                            ".concat(props.active ? 'active' : props.disabled ? 'disabled' : '', "\n                            ").concat(props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown', " \n                            ").concat(props.medium ? 'medium' : 'small', " \n                            ").concat(props.bg_white ? 'bg_white' : '', " \n                            ").concat(props.type === 'dots' || props.show ? 'light_green' : '', "    \n                            ").concat(calendar ? 'calendar' : '', "\n                        ")
+  })), props.options.map(option => /*#__PURE__*/React__default['default'].createElement("div", {
+    role: "option",
+    className: `${option.icon === 'check circle' ? 'selected' : ''} item`,
+    onClick: () => props.itemEvent(option.value)
+  }, /*#__PURE__*/React__default['default'].createElement("i", {
+    "aria-hidden": "true",
+    className: `${option.icon} icon`
+  }), /*#__PURE__*/React__default['default'].createElement("span", {
+    className: "text"
+  }, option.text)))))) : /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button.Group, {
+    className: `
+                            ${props.active ? 'active' : props.disabled ? 'disabled' : ''}
+                            ${props.icon || props.show ? 'ap_icon_dropdown' : props.color ? 'ap_custom_color_dropdown' : 'ap_dropdown'} 
+                            ${props.medium ? 'medium' : 'small'} 
+                            ${props.bg_white ? 'bg_white' : ''} 
+                            ${props.type === 'dots' || props.show ? 'light_green' : ''}    
+                            ${calendar ? 'calendar' : ''}
+                        `
   }, labelText && /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Button, null, labelText), /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown, _extends({
-    className: "button icon ".concat(props.show ? 'remove_icon' : ''),
+    className: `button icon ${props.show ? 'remove_icon' : ''}`,
     floating: true,
     trigger: /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null),
     onChange: props.dropdownHandle
@@ -441,14 +403,10 @@ var Dropdown = function Dropdown(props) {
     iconPosition: "left",
     className: "search ap_input grey",
     value: props.inputText,
-    onClick: function onClick() {
-      return props.stayOpenEvent();
-    },
-    onChange: function onChange(e) {
-      return props.inputEvent(e);
-    },
+    onClick: () => props.stayOpenEvent(),
+    onChange: e => props.inputEvent(e),
     autoFocus: true
-  }), options && options.map(function (option, index) {
+  }), options && options.map((option, index) => {
     return option.type !== 'undefined' && option.type === 'label' ? /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Header, {
       content: option.text
     }) : /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Item, _extends({
@@ -459,17 +417,15 @@ var Dropdown = function Dropdown(props) {
     }, option.icon ? {
       icon: option.icon
     } : {}, {
-      className: " ".concat(option.active ? 'active' : '')
+      className: ` ${option.active ? 'active' : ''}`
     }));
-  })) : color && /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, null, options && options.map(function (color) {
-    var checked1 = color.value === 'red' ? {
+  })) : color && /*#__PURE__*/React__default['default'].createElement(semanticUiReact.Dropdown.Menu, null, options && options.map(color => {
+    let checked1 = color.value === 'red' ? {
       checked: true
     } : '';
     return /*#__PURE__*/React__default['default'].createElement("div", {
-      className: "field ap_dropdown_color ap_dropdown_color_".concat(color.value),
-      onClick: function onClick() {
-        return props.itemEvent(color.value);
-      }
+      className: `field ap_dropdown_color ap_dropdown_color_${color.value}`,
+      onClick: () => props.itemEvent(color.value)
     }, /*#__PURE__*/React__default['default'].createElement("div", {
       className: "ui checked fitted checkbox"
     }, /*#__PURE__*/React__default['default'].createElement("input", _extends({
@@ -478,9 +434,7 @@ var Dropdown = function Dropdown(props) {
       type: "checkbox",
       value: ""
     }, checked1, {
-      onChange: function onChange() {
-        return props.itemEvent(color.value);
-      }
+      onChange: () => props.itemEvent(color.value)
     })), /*#__PURE__*/React__default['default'].createElement("label", null)));
   })))));
 };
